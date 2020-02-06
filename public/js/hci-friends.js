@@ -5,6 +5,14 @@ $(document).ready(function() {
 	initializePage();
 })
 
+// Call this function when a friend name is clicked on
+$(".friend a").click(changeText);
+
+function changeText(event) {
+	event.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
+}
+
 /*
  * Function that is called when the document is ready.
  */
